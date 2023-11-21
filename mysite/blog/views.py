@@ -12,7 +12,11 @@ def post_list(request):
 def post_detail(request,id):
     post = get_object_or_404(Post,
                              id=id,
-                             status=Post.Status.PUBLISHED)
+                             status=Post.Status.PUBLISHED,
+                             slug=post,
+                             publish_year=year,
+                             publish_month=month,
+                             publish_day = day)
     # try:
     #     post= Post.published.get(id=id)
     # except Post.DoesNotExist:
