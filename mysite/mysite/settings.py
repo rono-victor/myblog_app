@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'blog.apps.BlogConfig', #track our app
+    'taggit'
 ]
 
 MIDDLEWARE = [
@@ -122,3 +123,13 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+#Email server configuration
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'victor.kipngeno20@students.dkut.ac.ke'
+EMAIL_HOST_PASSWORD = ''
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+#alt to smtp server, django will write emails to the console
+#EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
